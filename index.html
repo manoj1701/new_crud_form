@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD FORM</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="form">
+            <h1>CRUD FORM</h1>
+        </div>
+        <div class="container box">
+            <div class="row">
+
+                <!-- Name section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="firstname">Name<span>*</span></label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" id="firstName" name="firstName" class="firstname1" placeholder="Name" required
+                        maxlength="20"><br>
+                    <div class="hide validation-error" id="fnameErr">Name is required</div>
+                    <span id="message"></span><br>
+                </div>
+
+                <!-- Mobile Number Section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="num">Mobile Number<span>*</span></label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" id="phoneNumber" maxlength="10" placeholder="Mobile Number" class="num1">
+                    <div class="hide validation-error" id="numErr">Mobile Number is required</div>
+                    <span id="message1"></span>
+                </div>
+
+                <!-- Email section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="email">Email Address<span>*</span></label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" id="emailAddress" class="email1" placeholder="Email Id"><br>
+                    <div class="hide validation-error" id="emailErr">Email is required</div>
+                    <span id="message2"></span><br>
+                </div>
+
+                <!-- Gender section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="gen">Gender<span>*</span></label>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <input type="radio" class="male" name="gender" id="male" value="male">
+                    <label>Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label>Female</label>
+                    <div class="hide validation-error" id="genderErr">Gender is required</div>
+                    <span id="message3"></span>
+                </div>
+
+                <!-- Language section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="skill">
+                        Languages Known<span>*</span>
+                    </label>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="skill1">
+                        <div>
+                            <input type="checkbox" id="Tamil" name="interest" value="Tamil">
+                            <label for="tamil">Tamil</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="English" name="interest" value="English">
+                            <label for="english">English</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Hindi" name="interest" value="Hindi">
+                            <label for="hindi">Hindi</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Malayalam" name="interest" value="Malayalam">
+                            <label for="malayalam">Malayalam</label>
+                        </div>
+                    </div>
+                    <div class="hide validation-error" id="languageErr">Language is required</div>
+                    <span id="message4"></span>
+                </div>
+
+                <!-- Country section -->
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <label class="country">Country<span>*</span></label>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <select id="cityName" class="city1" data-placeholder="Select Country...">
+                        <option>select</option>
+                        <option value="India">India</option>
+                        <option value="England">England</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Australia">Australia</option>
+                    </select><br>
+                    <div class="hide validation-error" id="countryErr">Country is required</div>
+                    <span id="message5"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button section -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 button11">
+                    <div class="button0">
+                        <button id="create11" class="reset" onclick="resetForm()">Reset</button>
+                    </div>
+                    <div class="button1">
+                        <button id="create1" class="create" onclick="onFormSubmit()">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Language</th>
+                    <th>Country</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
